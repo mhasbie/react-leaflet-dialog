@@ -1,6 +1,6 @@
 {
   "name": "react-leaflet-dialog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React wrapper of Leaflet.Dialog. A dialog modal window that is resizable and positionable on the map.",
   "main": "dist/react-leaflet-dialog.min.js",
   "scripts": {
@@ -50,6 +50,7 @@
     "react-dom": "^15.5.0",
     "react-leaflet": "^1.3.1",
     "webpack": "^1.13.0",
+    "webpack-css-loaders": "^1.0.0",
     "webpack-dev-server": "^1.12.1"
   }
 }

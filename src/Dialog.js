@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { MapControl } from 'react-leaflet';
 import L from 'leaflet';
 import './Leaflet.Dialog';
+import './Leaflet.Dialog.css';
 
 export default class Dialog extends MapControl {
 	createLeafletElement(props) {
