@@ -2,6 +2,7 @@ import { Children } from 'react';
 import { render } from 'react-dom';
 import { MapControl } from 'react-leaflet';
 import L from 'leaflet';
+import 'font-awesome/css/font-awesome.min.css';
 import './Leaflet.Dialog';
 import './Leaflet.Dialog.css';
 
