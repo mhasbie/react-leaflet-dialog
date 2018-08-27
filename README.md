@@ -43,7 +43,7 @@ import Dialog from 'react-leaflet-dialog';
 </Map>
 ```
 
-### Options:
+## Options
 
 Any props passed to Dialog are passed down to Leaflet.Dialog.
 
@@ -58,7 +58,7 @@ Refer [Leaflet.Dialog options](https://github.com/NBTSolutions/Leaflet.Dialog#op
 | position | [String] | 'topleft' | The leaflet control div to place the modal inside, as a starting reference point.
 | initOpen | [Boolean] | true | Whether or not to initialize in an open state.
 
-### Methods:
+## Methods
 
 | Method | Returns | Example | Description
 | --- | --- | --- | ---
@@ -77,7 +77,7 @@ Refer [Leaflet.Dialog options](https://github.com/NBTSolutions/Leaflet.Dialog#op
 | hideResize() | this | dialog.hideResize(); | Hides the resizing symbol
 | showResize() | this | dialog.showResize(); | Shows the resizing symbol
 
-#### Example
+### Example
 
 ```javascript
 
@@ -116,7 +116,7 @@ render() {
 
 ```
 
-### Events:
+## Events
 
 | Event | Data | Description
 | --- | --- | ---
