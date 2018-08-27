@@ -1,12 +1,12 @@
 # react-leaflet-dialog
 
-[![travis build](https://img.shields.io/travis/mhasbie/react-leaflet-vectorgrid.svg?style=plastic)](https://travis-ci.org/mhasbie/react-leaflet-vectorgrid)
-[![version](https://img.shields.io/npm/v/react-leaflet-vectorgrid.svg?style=plastic)](http://npm.im/react-leaflet-vectorgrid)
-[![MIT License](https://img.shields.io/npm/l/react-leaflet-vectorgrid.svg?style=plastic)](http://opensource.org/licenses/MIT)
-[![dependencies](https://img.shields.io/david/mhasbie/react-leaflet-vectorgrid.svg?style=plastic)](https://david-dm.org/mhasbie/react-leaflet-vectorgrid)
-[![peer dependencies](https://img.shields.io/david/peer/mhasbie/react-leaflet-vectorgrid.svg?style=plastic)](https://david-dm.org/mhasbie/react-leaflet-vectorgrid?type=peer)
-[![downloads](https://img.shields.io/npm/dt/react-leaflet-vectorgrid.svg?style=plastic)](http://npm-stat.com/charts.html?package=react-leaflet-vectorgrid&from=2018-01-01)
-[![issues](https://img.shields.io/github/issues/mhasbie/react-leaflet-vectorgrid.svg?style=plastic)](https://github.com/mhasbie/react-leaflet-vectorgrid/issues)
+[![travis build](https://img.shields.io/travis/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://travis-ci.org/mhasbie/react-leaflet-dialog)
+[![version](https://img.shields.io/npm/v/react-leaflet-dialog.svg?style=plastic)](http://npm.im/react-leaflet-dialog)
+[![MIT License](https://img.shields.io/npm/l/react-leaflet-dialog.svg?style=plastic)](http://opensource.org/licenses/MIT)
+[![dependencies](https://img.shields.io/david/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://david-dm.org/mhasbie/react-leaflet-dialog)
+[![peer dependencies](https://img.shields.io/david/peer/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://david-dm.org/mhasbie/react-leaflet-dialog?type=peer)
+[![downloads](https://img.shields.io/npm/dt/react-leaflet-dialog.svg?style=plastic)](http://npm-stat.com/charts.html?package=react-leaflet-dialog&from=2018-01-01)
+[![issues](https://img.shields.io/github/issues/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://github.com/mhasbie/react-leaflet-dialog/issues)
 
 React wrapper of [Leaflet.Dialog](https://github.com/NBTSolutions/Leaflet.Dialog) for [react-leaflet](https://github.com/PaulLeCam/react-leaflet).
 
