@@ -1,12 +1,13 @@
 # react-leaflet-dialog
 
-[![travis build](https://img.shields.io/travis/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://travis-ci.org/mhasbie/react-leaflet-dialog)
 [![version](https://img.shields.io/npm/v/react-leaflet-dialog.svg?style=plastic)](http://npm.im/react-leaflet-dialog)
-[![MIT License](https://img.shields.io/npm/l/react-leaflet-dialog.svg?style=plastic)](http://opensource.org/licenses/MIT)
+[![react-leaflet compatibility](https://img.shields.io/npm/dependency-version/react-leaflet-dialog/peer/react-leaflet.svg?style=plastic)](https://github.com/mhasbie/react-leaflet-dialog)
+[![travis build](https://img.shields.io/travis/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://travis-ci.org/mhasbie/react-leaflet-dialog)
 [![dependencies](https://img.shields.io/david/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://david-dm.org/mhasbie/react-leaflet-dialog)
 [![peer dependencies](https://img.shields.io/david/peer/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://david-dm.org/mhasbie/react-leaflet-dialog?type=peer)
-[![downloads](https://img.shields.io/npm/dt/react-leaflet-dialog.svg?style=plastic)](http://npm-stat.com/charts.html?package=react-leaflet-dialog&from=2018-01-01)
 [![issues](https://img.shields.io/github/issues/mhasbie/react-leaflet-dialog.svg?style=plastic)](https://github.com/mhasbie/react-leaflet-dialog/issues)
+[![downloads](https://img.shields.io/npm/dt/react-leaflet-dialog.svg?style=plastic)](http://npm-stat.com/charts.html?package=react-leaflet-dialog&from=2018-01-01)
+[![MIT License](https://img.shields.io/npm/l/react-leaflet-dialog.svg?style=plastic)](http://opensource.org/licenses/MIT)
 
 React wrapper of [Leaflet.Dialog](https://github.com/NBTSolutions/Leaflet.Dialog) for [react-leaflet](https://github.com/PaulLeCam/react-leaflet).
 
@@ -27,6 +28,12 @@ A dialog modal window that is resizable and positionable on the map.
 npm install react-leaflet-dialog --save
 ```
 
+Include font-awesome css to your project.
+
+```html
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+```
+
 ## Usage example
 
 ```javascript
@@ -39,7 +46,9 @@ import Dialog from 'react-leaflet-dialog';
     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   />
 
-  <Dialog ref={(ref) => { this.dialog = ref; }} id="dialog1" />
+  <Dialog ref={(ref) => { this.dialog = ref; }} id="dialog1">
+	<div>Dialog content.</div>
+  </Dialog>
 </Map>
 ```
 

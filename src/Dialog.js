@@ -2,13 +2,11 @@ import { Children } from 'react';
 import { render } from 'react-dom';
 import { MapControl } from 'react-leaflet';
 import L from 'leaflet';
-import 'font-awesome/css/font-awesome.min.css';
-import './Leaflet.Dialog';
-import './Leaflet.Dialog.css';
+import 'leaflet-dialog';
+import 'leaflet-dialog/Leaflet.Dialog.css';
 
 export default class Dialog extends MapControl {
 	createLeafletElement(props) {
-		// this._id = this._generateId();
 		this._id = props.id || this._generateId();
 		this._containerId = `dialog-contents-${this._id}`;
 		return L.control.dialog(props).setContent(`<div id="${this._containerId}"></div>`);
@@ -16,7 +14,7 @@ export default class Dialog extends MapControl {
 
 	componentDidMount() {
 		super.componentDidMount();
-		const { map } = this.context;
+		const { map } = this.props.leaflet || this.context;
 		const {
 			onOpened,
 			onClosed,

@@ -1,0 +1,76 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>react-leaflet-dialog example for react-leaflet v1</title>
+		<meta name="description" content="https://github.com/mhasbie/react-leaflet-dialog">
+
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<style>
+			.leaflet-container {
+				position: absolute;
+				top: 40px;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container"></div>
+  
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.23.1/babel.js"></script>
+		<script src="https://unpkg.com/react@16.5.2/umd/react.production.min.js"></script>
+		<script src="https://unpkg.com/react-dom@16.5.2/umd/react-dom.production.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet-src.js"></script>
+		<script src="https://unpkg.com/react-leaflet@1.9.1/dist/react-leaflet.js"></script>
+		<script src="../dist/react-leaflet-dialog.min.js"></script>
+		<script type="text/babel">
+			const { Map, TileLayer } = ReactLeaflet;
+			const Dialog = ReactLeafletDialog;
+
+			class SimpleExample extends React.Component {
+				constructor() {
+					super();
+					this.openDialog = this.openDialog.bind(this);
+					this.closeDialog = this.closeDialog.bind(this);
+					this.state = {
+						center: [2.935403, 101.448205],
+						zoom: 3,
+						minZoom: 1,
+						maxZoom: 22,
+					}
+				}
+				
+				openDialog() {
+					this.dialog.open();
+				}
+
+				closeDialog() {
+					this.dialog.close();
+				}
+
+				render() {
+					return (
+						<div>
+							<button onClick={this.openDialog}>Open Dialog</button>
+							<button onClick={this.closeDialog}>Close Dialog</button>
+							<Map {...this.state}>
+								<TileLayer
+									attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+									url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+								/>
+								<Dialog ref={(ref) => { this.dialog = ref; }} anchor={[50, 50]} >
+									<div>This is the dialog content.</div>
+								</Dialog>
+							</Map>
+						</div>
+					);
+				}
+			}
+
+			ReactDOM.render(<SimpleExample />, document.getElementById('container'))
+		</script>
+	</body>
+</html>
