@@ -107,7 +107,6 @@ export default class Dialog extends MapControl {
 	}
 
 	setContent(content) {
-		// this.leafletElement.setContent(content);
 		this._renderContent(content);
 	}
 

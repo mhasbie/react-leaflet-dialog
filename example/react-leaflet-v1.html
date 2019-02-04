@@ -35,6 +35,7 @@
 					super();
 					this.openDialog = this.openDialog.bind(this);
 					this.closeDialog = this.closeDialog.bind(this);
+					this.destroyDialog = this.destroyDialog.bind(this);
 					this.state = {
 						center: [2.935403, 101.448205],
 						zoom: 3,
@@ -50,18 +51,23 @@
 				closeDialog() {
 					this.dialog.close();
 				}
+				
+				destroyDialog() {
+					this.dialog.destroy();
+				}
 
 				render() {
 					return (
 						<div>
 							<button onClick={this.openDialog}>Open Dialog</button>
 							<button onClick={this.closeDialog}>Close Dialog</button>
+							<button onClick={this.destroyDialog}>Destroy Dialog</button>
 							<Map {...this.state}>
 								<TileLayer
 									attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 									url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
 								/>
-								<Dialog ref={(ref) => { this.dialog = ref; }} anchor={[50, 50]} >
+								<Dialog ref={(ref) => { this.dialog = ref; }} anchor={[50, 50]} initOpen={false} >
 									<div>This is the dialog content.</div>
 								</Dialog>
 							</Map>

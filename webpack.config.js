@@ -27,7 +27,7 @@ module.exports = {
 			root: 'React'
 		}
 	},
-	mode: 'development',
+	mode: 'production',
 	module: {
 		rules: [
 			{
