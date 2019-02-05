@@ -1,11 +1,12 @@
 {
 	"name": "react-leaflet-dialog",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "React wrapper of Leaflet.Dialog. A dialog modal window that is resizable and positionable on the map.",
 	"main": "dist/react-leaflet-dialog.min.js",
 	"scripts": {
-		"build": "npm run build:lib && npm run build:dist",
+		"build": "npm run build:lib && npm run build:dist && npm run build:dev",
 		"build:dist": "webpack src/index.js --output dist/react-leaflet-dialog.min.js",
+		"build:dev": "webpack src/index.js --mode development --output dist/react-leaflet-dialog.js",
 		"build:lib": "npm run compile:lib",
 		"clean:lib": "rm -Rf ./lib",
 		"compile:lib": "babel src --out-dir lib",

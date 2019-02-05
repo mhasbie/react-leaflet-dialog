@@ -9,15 +9,21 @@
 [![downloads](https://img.shields.io/npm/dt/react-leaflet-dialog.svg?style=plastic)](http://npm-stat.com/charts.html?package=react-leaflet-dialog&from=2018-01-01)
 [![MIT License](https://img.shields.io/npm/l/react-leaflet-dialog.svg?style=plastic)](http://opensource.org/licenses/MIT)
 
+
 React wrapper of [Leaflet.Dialog](https://github.com/NBTSolutions/Leaflet.Dialog) for [react-leaflet](https://github.com/PaulLeCam/react-leaflet).
 
 A dialog modal window that is resizable and positionable on the map.
 
-*Tested with Leaflet 1.3.1 and React-Leaflet 1.8.0*
+*Tested with Leaflet 1.4.0 and React-Leaflet 1.9.1, React-Leaflet 2.2.0*
 
-[Demo](http://nbtsolutions.github.io/Leaflet.Dialog/).
 
-[JSFiddle](https://jsfiddle.net/m_hasbie/jemw7qzr/)
+## Demos
+
+| Version	| Demo	|
+| ---		| ---	|
+| react-leaflet@1.9.1 | [`CodePen`](https://codepen.io/m_hasbie/full/omePOP/) |
+| react-leaflet@2.x | [`CodePen`](https://codepen.io/m_hasbie/full/gqxBKr/) |
+
 
 
 ## Installation
@@ -34,11 +40,35 @@ Include font-awesome css to your project.
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 ```
 
-## Usage example
+## Usage example for `react-leaflet` **v1**
+
 
 ```javascript
 import { Map, TileLayer } from 'react-leaflet';
 import Dialog from 'react-leaflet-dialog';
+		
+<Map center={[101.483459, 2.938926]} zoom={12}>
+  <TileLayer
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  />
+
+  <Dialog ref={(ref) => { this.dialog = ref; }} id="dialog1">
+	<div>Dialog content.</div>
+  </Dialog>
+</Map>
+```
+
+
+## Usage example for `react-leaflet` **v2**
+
+
+```javascript
+import { Map, TileLayer, withLeaflet } from 'react-leaflet';
+import DialogDefault from 'react-leaflet-dialog';
+
+// wrap `Dialog` component with `withLeaflet` HOC
+const Dialog = withLeaflet(DialogDefault);
 		
 <Map center={[101.483459, 2.938926]} zoom={12}>
   <TileLayer
